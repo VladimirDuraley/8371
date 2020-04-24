@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+<!ELEMENT body(order)>
+<!ELEMENT order (date_of_completion, id, service, client, cost, date_of_preparation, status, work_on_order)>
+<!ELEMENT date_of_completion(planned, real)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT service(type , cost)>
+<!ELEMENT client(full_name, phone_nunber, email, discount)>
+<!ELEMENT cost (#PCDATA)>
+<!ELEMENT date_of_preparation (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT work_on_order(material_duration, status, master)>
+<!ELEMENT planned (#PCDATA)>
+<!ELEMENT real (#PCDATA)>
+<!ELEMENT full_name (#PCDATA)>
+<!ELEMENT phone_nunber (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT discount (#PCDATA)>
+<!ELEMENT material_duration (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT master (full_name, specialization, phone_nunber, email)>
+<!ELEMENT specialization (mixing, record, bit_creation, mastering)>
+<!ATTLIST mixing option (true | false) "false">
+<!ATTLIST record option record (true | false) "false">
+<!ATTLIST bit_creation option bit_creation (true | false) "false">
+<!ATTLIST mastering option mastering (true | false) "false">
+]>
+<body>
+    <order>
+        <date_of_completion>
+            <planned></planned>
+            <real></real>
+        </date_of_completion>
+        <id></id>
+        <service>
+            <type></type>
+            <cost></cost>
+        </service>
+        <client>
+            <full_name></full_name>
+            <phone_nunber></phone_nunber>
+            <email></email>
+            <discount></discount>
+        </client>
+        <cost></cost>
+        <date_of_preparation></date_of_preparation>
+        <status></status>
+        <work_on_order>
+            <material_duration></material_duration>
+            <status></status>
+            <master>
+                <full_name></full_name>
+                <specialization>
+                    <mixing option=""></mixing>
+                    <record option=""></record>
+                    <bit_creation option=""></bit_creation>
+                    <mastering option=""></mastering>
+                </specialization>
+                <phone_nunber></phone_nunber>
+                <email></email>
+            </master>
+        </work_on_order>
+    </order>
+
+
+</body>
