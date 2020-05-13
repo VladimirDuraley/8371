@@ -1,0 +1,66 @@
+<!ELEMENT studio (coach_database,list_of_type_of_subscription,list_of_subscription,list_of_course,schedule,client_database,list_of_sessions)>
+
+<!ELEMENT coach_database (coach)>
+
+<!ELEMENT coach (fullname_of_coach,taught_dances,status_of_coach,date_of_employment,date_of_termination,phone_number_coach,email_coach)>
+<!ELEMENT fullname_of_coach (#PCDATA)>
+<!ELEMENT taught_dances (t_dance,t_dance)>
+<!ELEMENT t_dance (#PCDATA)>
+<!ELEMENT status_of_coach (#PCDATA)>
+<!ELEMENT date_of_employment (#PCDATA)>
+<!ELEMENT date_of_termination (#PCDATA)>
+<!ELEMENT phone_number_coach (#PCDATA)>
+<!ELEMENT email_coach (#PCDATA)>
+
+<!ELEMENT list_of_type_of_subscription (type_of_subscription)>
+
+<!ELEMENT type_of_subscription (id_type_of_subscription,id_course,duration,price)>
+<!ELEMENT id_type_of_subscription (#PCDATA)>
+<!ELEMENT duration (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!ELEMENT list_of_subscription (subscription)>
+
+<!ELEMENT subscription (id_type_of_subscription,id_of_client,status_of_subscription,date_of_begining,date_of_ending,status_of_payment)>
+<!ELEMENT status_of_subscription (#PCDATA)>
+<!ELEMENT date_of_begining (#PCDATA)>
+<!ELEMENT date_of_ending (#PCDATA)>
+<!ELEMENT status_of_payment (#PCDATA)>
+
+<!ELEMENT list_of_course (course)>
+
+<!ELEMENT course (id_course,dance,fullname_of_coach,plan_of_lesson,group_of_course)>
+<!ELEMENT id_course (#PCDATA)>
+<!ELEMENT dance (#PCDATA)>
+<!ELEMENT plan_of_lesson (id_course,date_of_compilation,list_of_exercises)>
+<!ELEMENT date_of_compilation (#PCDATA)>
+<!ELEMENT list_of_exercises (exercise,exercise)>
+<!ELEMENT exercise (#PCDATA)>
+<!ELEMENT group_of_course (id_course,id_of_client,phone_number_client,email_client,status_of_subscription)>
+<!ELEMENT phone_number_client (#PCDATA)>
+<!ELEMENT email_client (#PCDATA)>
+
+<!ELEMENT schedule (monday,tuesday,wednesday,thursday,friday,saturday,sunday)>
+
+<!ELEMENT monday (time)>
+<!ELEMENT tuesday (time)>
+<!ELEMENT wednesday (time)>
+<!ELEMENT thursday (time)>
+<!ELEMENT friday (time)>
+<!ELEMENT saturday (time)>
+<!ELEMENT sunday (time)>
+<!ELEMENT time (id_course)>
+
+<!ELEMENT client_database (client)>
+
+<!ELEMENT client (id_of_client,client_photo,fullname_of_client,phone_number_client,email_client)>
+<!ELEMENT id_of_client (#PCDATA)>
+<!ELEMENT client_photo (#PCDATA)>
+<!ELEMENT fullname_of_client (#PCDATA)>
+
+<!ELEMENT list_of_sessions (session)>
+
+<!ELEMENT session (date_of_session,weekday,time_of_session,id_of_client,id_course)>
+<!ELEMENT date_of_session (#PCDATA)>
+<!ELEMENT weekday (#PCDATA)>
+<!ELEMENT time_of_session (#PCDATA)>

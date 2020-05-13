@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://msiter.ru" xmlns="http://msiter.ru" elementFormDefault="qualified">
+  <xs:element name="studio">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="сoach_database">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="coach">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="fullname_of_coach" type="xs:string"></xs:element>
+
+                    <xs:element name="taught_dances">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="t_dance" type="xs:string"></xs:element>
+
+                          <xs:element name="t_dance" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="status_of_coach" type="xs:string"></xs:element>
+
+                    <xs:element name="date_of_employment" type="xs:string"></xs:element>
+
+                    <xs:element name="date_of_termination" type="xs:string"></xs:element>
+
+                    <xs:element name="phone_number_coach" type="xs:string"></xs:element>
+
+                    <xs:element name="email_coach" type="xs:string"></xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="list_of_type_of_subscription">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="type_of_subscription">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="id_type_of_subscription" type="xs:string"></xs:element>
+
+                    <xs:element name="id_course" type="xs:string"></xs:element>
+
+                    <xs:element name="duration" type="xs:string"></xs:element>
+
+                    <xs:element name="price" type="xs:string"></xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="list_of_subscription">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="subscription">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="id_type_of_subscription" type="xs:string"></xs:element>
+
+                    <xs:element name="id_of_client" type="xs:string"></xs:element>
+
+                    <xs:element name="status_of_subscription" type="xs:string"></xs:element>
+
+                    <xs:element name="date_of_begining" type="xs:string"></xs:element>
+
+                    <xs:element name="date_of_ending" type="xs:string"></xs:element>
+
+                    <xs:element name="status_of_payment" type="xs:string"></xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="list_of_course">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="course">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="id_course" type="xs:string"></xs:element>
+
+                    <xs:element name="dance" type="xs:string"></xs:element>
+
+                    <xs:element name="fullname_of_coach" type="xs:string"></xs:element>
+
+                    <xs:element name="plan_of_lesson">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                          <xs:element name="date_of_compilation" type="xs:string"></xs:element>
+
+                          <xs:element name="list_of_exercises">
+                            <xs:complexType>
+                              <xs:sequence>
+
+                                <xs:element name="exercise" type="xs:string"></xs:element>
+
+                                <xs:element name="exercise" type="xs:string"></xs:element>
+
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="group_of_course">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                          <xs:element name="id_of_client" type="xs:string"></xs:element>
+
+                          <xs:element name="phone_number_client" type="xs:string"></xs:element>
+
+                          <xs:element name="email_client" type="xs:string"></xs:element>
+
+                          <xs:element name="status_of_subscription" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="schedule">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="monday">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="time">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="tuesday">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="time">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="wednesday">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="time">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="thursday">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="time">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="friday">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="time">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="saturday">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="time">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="sunday">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="time">
+                      <xs:complexType>
+                        <xs:sequence>
+
+                          <xs:element name="id_course" type="xs:string"></xs:element>
+
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="client_database">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="client">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="id_of_client" type="xs:string"></xs:element>
+
+                    <xs:element name="client_photo" type="xs:string"></xs:element>                 
+
+                    <xs:element name="fullname_of_client" type="xs:string"></xs:element>
+
+                    <xs:element name="phone_number_client" type="xs:string"></xs:element>
+
+                    <xs:element name="email_client" type="xs:string"></xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="list_of_sessions">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="session">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="date_of_session" type="xs:string"></xs:element>
+
+                    <xs:element name="weekday" type="xs:string"></xs:element>
+
+                    <xs:element name="time_of_session" type="xs:string"></xs:element>
+
+                    <xs:element name="id_of_client" type="xs:string"></xs:element>
+
+                    <xs:element name="id_course" type="xs:string"></xs:element>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

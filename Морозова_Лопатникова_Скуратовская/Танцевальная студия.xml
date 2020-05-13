@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE studio SYSTEM "studio.dtd">
+<studio xmlns="http://msiter.ru"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://msiter.ru studio.xsd">
+  <coach_database><!--База тренеров-->
+    <coach><!--Тренер-->
+      <fullname_of_coach></fullname_of_coach> <!--ФИО тренера-->
+      <taught_dances><!--Преподаваемые виды танцев-->
+        <t_dance></t_dance>
+        <t_dance></t_dance>
+      </taught_dances>
+      <status_of_coach></status_of_coach><!--Статус тренера!!!!!!!!!-->       
+      <date_of_employment></date_of_employment><!--Дата трудоустройства-->
+      <date_of_termination></date_of_termination><!--Дата увольнения-->
+      <phone_number_coach></phone_number_coach><!--Контактный телефон-->
+      <email_coach></email_coach><!--Email-->
+    </coach>
+  </coach_database>
+ 
+  <list_of_type_of_subscription><!--Список типов абонементов-->
+    <type_of_subscription><!--Тип абонемента-->
+      <id_type_of_subscription></id_type_of_subscription><!--id типа абонемента-->
+      <id_course></id_course><!--Id курса-->
+      <duration></duration><!--Продолжительность абонемента-->
+      <price></price><!--Стоимость абонемента-->
+    </type_of_subscription>
+  </list_of_type_of_subscription>
+  
+  <list_of_subscription><!--Список абонементов-->
+    <subscription><!--Абонемент-->
+      <id_type_of_subscription></id_type_of_subscription><!--id типа абонемента-->
+      <id_of_client></id_of_client><!--Id клиента-->
+      <status_of_subscription></status_of_subscription><!--Статус абонемента!!!!!!!!-->
+      <date_of_begining></date_of_begining><!--Дата начала абонемента-->
+      <date_of_ending></date_of_ending><!--Дата окончания абонемента-->
+      <status_of_payment></status_of_payment><!--Статус оплаты!!!!!!!!-->
+    </subscription>
+  </list_of_subscription>
+    
+  <list_of_course><!--Список курсов-->
+    <course><!--Курс-->
+      <id_course></id_course><!--Id курса-->
+      <dance></dance><!--Вид танца-->
+      <fullname_of_coach></fullname_of_coach> <!--ФИО тренера-->
+      <plan_of_lesson><!--План занятий-->
+        <id_course></id_course><!--Id курса-->
+        <date_of_compilation></date_of_compilation><!--Дата составления-->
+        <list_of_exercises><!--Список упражнений-->
+          <exercise></exercise>
+          <exercise></exercise>
+        </list_of_exercises>
+      </plan_of_lesson>
+      <group_of_course><!--Группа курса-->
+        <id_course></id_course><!--Id курса-->
+        <id_of_client></id_of_client><!--Id клиента-->
+        <phone_number_client></phone_number_client><!--Контактный телефон-->
+        <email_client></email_client><!--Email-->
+        <status_of_subscription></status_of_subscription><!--Статус абонемента!!!!!!!!-->
+      </group_of_course>
+    </course>
+  </list_of_course>
+
+  <schedule><!--Расписание-->    
+    <monday><!--Понедельник-->
+      <time><!--Время-->
+        <id_course></id_course><!--Id курса-->
+      </time>
+    </monday>
+    
+    <tuesday><!--Вторник-->
+      <time><!--Время-->
+        <id_course></id_course><!--Id курса-->
+      </time>
+    </tuesday>
+    
+    <wednesday><!--Среда-->
+      <time><!--Время-->
+        <id_course></id_course><!--Id курса-->
+      </time>
+    </wednesday>
+    
+    <thursday><!--Четверг-->
+      <time><!--Время-->
+        <id_course></id_course><!--Id курса-->
+      </time>
+    </thursday>
+    
+    <friday><!--Пятница-->
+      <time><!--Время-->
+        <id_course></id_course><!--Id курса-->
+      </time>
+    </friday>
+    
+    <saturday><!--Суббота-->
+      <time><!--Время-->
+        <id_course></id_course><!--Id курса-->
+      </time>
+    </saturday>
+    
+    <sunday><!--Воскресенье-->
+      <time><!--Время-->
+        <id_course></id_course><!--Id курса-->
+      </time>
+    </sunday>   
+  </schedule>
+
+  <client_database><!--База клиентов-->
+    <client><!--Клиент-->
+      <id_of_client></id_of_client><!--Id клиента-->
+      <client_photo></client_photo><!--Фото клиента-->
+      <fullname_of_client></fullname_of_client> <!--ФИО клиента-->
+      <phone_number_client></phone_number_client><!--Контактный телефон-->
+      <email_client></email_client><!--Email-->
+    </client>
+  </client_database>
+
+  <list_of_sessions><!--Список посещений-->
+    <session><!--Посещение-->
+      <date_of_session></date_of_session><!--Дата посещения-->
+      <weekday></weekday><!--День недели!!!!!!!!!!!!!!!!!!!!!!!-->
+      <time_of_session></time_of_session><!--Время посещения-->
+      <id_of_client></id_of_client><!--Id клиента-->
+      <id_course></id_course><!--Id курса-->
+    </session>
+  </list_of_sessions>
+</studio>
