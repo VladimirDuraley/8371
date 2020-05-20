@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+    <!ELEMENT body (registry,doctor,head_physician)>
+        <!ELEMENT registry (timetable, registration, record_view, talon, medical_record)>
+            <!ELEMENT timetable (id_doctor, day_of_the_week, start_time, end_time, cabinet)>
+                <!ELEMENT id_doctor (#PCDATA)>
+                <!ELEMENT day_of_the_week (#PCDATA)>
+                <!ELEMENT start_time (#PCDATA)>
+                <!ELEMENT end_time (#PCDATA)>
+                <!ELEMENT cabinet (#PCDATA)>    
+            <!ELEMENT registration (patient_FIO, date, time, id_doctor, cabinet)>
+                <!ELEMENT patient_FIO (#PCDATA)>
+                <!ELEMENT date (#PCDATA)>
+                <!ELEMENT time (#PCDATA)>
+                <!ELEMENT id_doctor (#PCDATA)>
+                <!ELEMENT cabinet (#PCDATA)>
+            <!ELEMENT record_view (patient_FIO, date, time, id_doctor)>
+                <!ELEMENT patient_FIO (#PCDATA)>
+                <!ELEMENT date (#PCDATA)>
+                <!ELEMENT time (#PCDATA)>
+                <!ELEMENT id_doctor (#PCDATA)>
+            <!ELEMENT talon (#PCDATA)>
+            <!ELEMENT medical_record (patient_FIO, birth_date, address, policy_number, phone_number)>
+                <!ELEMENT patient_FIO (#PCDATA)>
+                <!ELEMENT birth_date (#PCDATA)>
+                <!ELEMENT address (#PCDATA)>
+                <!ELEMENT policy_number (#PCDATA)>
+                <!ELEMENT phone_number (#PCDATA)>
+        <!ELEMENT doctor (appointment, medical_record1)>
+            <!ELEMENT appointment (diagnosis, complaints, prescribed_drugs, procedures)> 
+                <!ELEMENT diagnosis (#PCDATA)>
+                <!ELEMENT complaints (#PCDATA)>
+                <!ELEMENT prescribed_drugs (#PCDATA)>
+                <!ELEMENT procedures (type, procedure_date, procedure_time, procedure_cabinet)>  
+                    <!ELEMENT type (#PCDATA)>
+                    <!ELEMENT procedure_date (#PCDATA)>
+                    <!ELEMENT procedure_time (#PCDATA)>   
+                    <!ELEMENT procedure_cabinet (#PCDATA)> 
+            <!ELEMENT medical_record1 (patient_FIO, birth_date, case_history, vaccination_card)> 
+                <!ELEMENT patient_FIO (#PCDATA)>
+                <!ELEMENT birth_date (#PCDATA)>
+                <!ELEMENT case_history (#PCDATA)>
+                <!ELEMENT vaccination_card (#PCDATA)>
+        <!ELEMENT head_physician (data_base, id_doctor1)>
+            <!ELEMENT data_base (id_doctor, recruitment_date, experience, cabinet)> 
+                <!ELEMENT id_doctor (#PCDATA)>
+                <!ELEMENT recruitment_date (#PCDATA)>
+                <!ELEMENT experience (#PCDATA)>
+                <!ELEMENT cabinet (#PCDATA)> 
+            <!ELEMENT id_doctor1 (doctor_FIO, specialty, doctor_birth_date, doctor_phone_number)> 
+                <!ELEMENT doctor_FIO (#PCDATA)>
+                <!ELEMENT specialty (#PCDATA)>
+                <!ELEMENT doctor_birth_date (#PCDATA)>
+                <!ELEMENT doctor_phone_number (#PCDATA)>
+]>
+
+<body>
+    <registry>
+        <timetable>
+            <id_doctor>id23456</id_doctor>
+            <day_of_the_week>tuesday</day_of_the_week>
+            <start_time>9:50</start_time>
+            <end_time>15:10</end_time>
+            <cabinet>208</cabinet>
+        </timetable>
+        <registration>
+            <patient_FIO>Ivanov Ivan Ivanovich</patient_FIO>
+            <date>04.09.2020</date>
+            <time>11:40</time>
+            <id_doctor>id23456</id_doctor>
+            <cabinet>208</cabinet>
+        </registration>
+        <record_view>
+            <patient_FIO>Ivanov Ivan Ivanovich</patient_FIO>
+            <date>04.09.2020</date>
+            <time>11:40</time>
+            <id_doctor>id23456</id_doctor>   
+        </record_view>
+        <talon></talon>
+        <medical_record>
+            <patient_FIO>Ivanov Ivan Ivanovich</patient_FIO>
+            <birth_date>17.05.1992</birth_date>
+            <address>Pirogova, 64</address>
+            <policy_number>4695894583</policy_number>
+            <phone_number>+79183672726</phone_number>
+        </medical_record>
+    </registry>
+    <doctor>
+        <appointment>
+            <diagnosis>gastritis</diagnosis>
+            <complaints>heat, stomach-ache</complaints>
+            <prescribed_drugs></prescribed_drugs>
+            <procedures>
+                <type></type>
+                <procedure_date></procedure_date>
+                <procedure_time></procedure_time>
+                <procedure_cabinet></procedure_cabinet>
+            </procedures>
+        </appointment>
+        <medical_record1>
+            <patient_FIO>Ivanov Ivan Ivanovich</patient_FIO>
+            <birth_date>17.05.1992</birth_date>
+            <case_history></case_history>
+            <vaccination_card></vaccination_card>
+      </medical_record1>
+    </doctor>
+    <head_physician>
+        <data_base>
+            <id_doctor>id23456</id_doctor>
+            <recruitment_date>12.06.1998</recruitment_date>
+            <experience>20 years</experience> 
+            <cabinet>208</cabinet>  
+        </data_base>
+        <id_doctor1>
+            <doctor_FIO></doctor_FIO>
+            <specialty></specialty>
+            <doctor_birth_date></doctor_birth_date>
+            <doctor_phone_number></doctor_phone_number>
+        </id_doctor1>
+    </head_physician>
+</body>
